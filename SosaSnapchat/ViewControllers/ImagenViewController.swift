@@ -48,6 +48,22 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
                 self.performSegue(withIdentifier: "seleccionarContactoSegue", sender: nil)
             }
         }
+        let alertaCarga = UIAlertController(title: "Cargando Imagen...", message: "0%", preferredStyle: .alert)
+        let progresoCarga: UIProgressView = UIProgressView(progressViewStyle: .default)
+        cargarImagen.observe(.progress) { (snapshot) in
+            let porcentaje = Double(snapshot.progress!.completedUnitCount)/Double(snapshot.progress!.totalUnitCount)
+            print(porcentaje)
+            progresoCarga.setProgress(Float(porcentaje), animated: true)
+            progresoCarga.frame = CGRect(x: 10, y: 70, width: 250, height: 0)
+            alertaCarga.message = String(round(porcentaje*100.0)) + "%"
+            if porcentaje>=1.0{
+                alertaCarga.dismiss(animated: true, completion: nil)
+            }
+        }
+        let btnOK = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+        alertaCarga.addAction(btnOK)
+        alertaCarga.view.addSubview(progresoCarga)
+        present(alertaCarga, animated: true, completion: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
