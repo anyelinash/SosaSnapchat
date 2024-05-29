@@ -15,6 +15,8 @@
 		B47511182BFBCDE2000B096B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47511172BFBCDE2000B096B /* Assets.xcassets */; };
 		B475111B2BFBCDE2000B096B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47511192BFBCDE2000B096B /* LaunchScreen.storyboard */; };
 		B47511232BFBD173000B096B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B47511222BFBD173000B096B /* GoogleService-Info.plist */; };
+		B4AAA9DD2C050FF200C5D7AE /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA9DC2C050FF200C5D7AE /* SnapsViewController.swift */; };
+		B4AAA9DF2C05130200C5D7AE /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA9DE2C05130200C5D7AE /* ImagenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		B475111A2BFBCDE2000B096B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B475111C2BFBCDE2000B096B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B47511222BFBD173000B096B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4AAA9D92C050A8100C5D7AE /* SosaSnapchat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SosaSnapchat.entitlements; sourceTree = "<group>"; };
+		B4AAA9DC2C050FF200C5D7AE /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		B4AAA9DE2C05130200C5D7AE /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
 		C1DC61BAFDA1AC4B17F6055C /* Pods-SosaSnapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SosaSnapchat.debug.xcconfig"; path = "Target Support Files/Pods-SosaSnapchat/Pods-SosaSnapchat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,11 +87,14 @@
 		B475110D2BFBCDDC000B096B /* SosaSnapchat */ = {
 			isa = PBXGroup;
 			children = (
+				B4AAA9D92C050A8100C5D7AE /* SosaSnapchat.entitlements */,
 				B47511222BFBD173000B096B /* GoogleService-Info.plist */,
 				B475110E2BFBCDDC000B096B /* AppDelegate.swift */,
 				B47511102BFBCDDC000B096B /* SceneDelegate.swift */,
 				B47511122BFBCDDC000B096B /* iniciarSesionViewController.swift */,
 				B47511142BFBCDDC000B096B /* Main.storyboard */,
+				B4AAA9DE2C05130200C5D7AE /* ImagenViewController.swift */,
+				B4AAA9DC2C050FF200C5D7AE /* SnapsViewController.swift */,
 				B47511172BFBCDE2000B096B /* Assets.xcassets */,
 				B47511192BFBCDE2000B096B /* LaunchScreen.storyboard */,
 				B475111C2BFBCDE2000B096B /* Info.plist */,
@@ -210,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4AAA9DD2C050FF200C5D7AE /* SnapsViewController.swift in Sources */,
+				B4AAA9DF2C05130200C5D7AE /* ImagenViewController.swift in Sources */,
 				B47511132BFBCDDC000B096B /* iniciarSesionViewController.swift in Sources */,
 				B475110F2BFBCDDC000B096B /* AppDelegate.swift in Sources */,
 				B47511112BFBCDDC000B096B /* SceneDelegate.swift in Sources */,
@@ -358,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SosaSnapchat/SosaSnapchat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -386,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SosaSnapchat/SosaSnapchat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
